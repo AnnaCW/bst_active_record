@@ -8,8 +8,6 @@ class Node < ActiveRecord::Base
   def insert(new_value, node=root)
     if new_value < node.value
       check_left(new_value, node)
-      # new_node = Node.create(value: new_value)
-      # update(left_id: new_node.id)
     else
       check_right(new_value, node)
     end
